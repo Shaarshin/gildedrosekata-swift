@@ -24,11 +24,13 @@ class GildedRoseKataTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
+        //given
         let items = [Item(name: "foo", sellIn: 0, quality: 0)]
+        //when
         let app = GildedRose(items: items);
         app.updateQuality();
-        XCTAssertEqual("fixme", app.items[0].name);
+        //then
+        XCTAssertEqual("foo", app.items[0].name);
         
     }
 
