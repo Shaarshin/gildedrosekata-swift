@@ -24,3 +24,9 @@ enum ItemName: String {
     //Conjured Items
     case cake = "Conjured Mana Cake"
 }
+
+enum ItemvQuality: Int {
+    case max = 50
+    case double = 11
+    case triple = 6
+}

@@ -27,19 +27,19 @@ public class GildedRose {
                     }
                 }
             } else { //Item is Inversed
-                if (items[i].quality < 50) {
+                if (items[i].quality < ItemvQuality.max.rawValue) {
                     items[i].quality = items[i].quality + 1
                     
                     //Pass
                     if (items[i].name == ItemName.pass.rawValue) {
-                        if (items[i].sellIn < 11) {
-                            if (items[i].quality < 50) {
+                        if (items[i].sellIn < ItemvQuality.double.rawValue) {
+                            if (items[i].quality < ItemvQuality.max.rawValue) {
                                 items[i].quality = items[i].quality + 1
                             }
                         }
                         
-                        if (items[i].sellIn < 6) {
-                            if (items[i].quality < 50) {
+                        if (items[i].sellIn < ItemvQuality.triple.rawValue) {
+                            if (items[i].quality < ItemvQuality.max.rawValue) {
                                 items[i].quality = items[i].quality + 1
                             }
                         }
@@ -63,7 +63,7 @@ public class GildedRose {
                         items[i].quality = items[i].quality - items[i].quality
                     }
                 } else { // Brie
-                    if (items[i].quality < 50) {
+                    if (items[i].quality < ItemvQuality.max.rawValue) {
                         items[i].quality = items[i].quality + 1
                     }
                 }
