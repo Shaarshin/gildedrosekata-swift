@@ -10,6 +10,7 @@
 		1319E9362232B4A8007BF664 /* GildedRoseKataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1319E9352232B4A8007BF664 /* GildedRoseKataTests.swift */; };
 		1319E94B2232B762007BF664 /* GildedRose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1319E94A2232B762007BF664 /* GildedRose.swift */; };
 		1319E94D2232B76C007BF664 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1319E94C2232B76C007BF664 /* Item.swift */; };
+		1319E9522232C6D9007BF664 /* ItemsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1319E9512232C6D9007BF664 /* ItemsDB.swift */; };
 		132B560D2232B1A100C6FD22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132B560C2232B1A100C6FD22 /* AppDelegate.swift */; };
 		132B560F2232B1A100C6FD22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132B560E2232B1A100C6FD22 /* ViewController.swift */; };
 		132B56122232B1A100C6FD22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 132B56102232B1A100C6FD22 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		1319E9372232B4A8007BF664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1319E94A2232B762007BF664 /* GildedRose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GildedRose.swift; sourceTree = "<group>"; };
 		1319E94C2232B76C007BF664 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		1319E9512232C6D9007BF664 /* ItemsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsDB.swift; sourceTree = "<group>"; };
 		132B56092232B1A100C6FD22 /* GildedRoseKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GildedRoseKata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		132B560C2232B1A100C6FD22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		132B560E2232B1A100C6FD22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				1319E94C2232B76C007BF664 /* Item.swift */,
+				1319E9512232C6D9007BF664 /* ItemsDB.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			files = (
 				1319E94D2232B76C007BF664 /* Item.swift in Sources */,
 				132B560F2232B1A100C6FD22 /* ViewController.swift in Sources */,
+				1319E9522232C6D9007BF664 /* ItemsDB.swift in Sources */,
 				1319E94B2232B762007BF664 /* GildedRose.swift in Sources */,
 				132B560D2232B1A100C6FD22 /* AppDelegate.swift in Sources */,
 			);

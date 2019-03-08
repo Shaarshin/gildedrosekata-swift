@@ -1,3 +1,10 @@
+//
+//  Item.swift
+//  GildedRoseKata
+//
+//  Created by Shaher Kassam on 08/03/2019.
+//  Copyright © 2019 Shaher. All rights reserved.
+//
 
 public class Item {
     public var name: String
