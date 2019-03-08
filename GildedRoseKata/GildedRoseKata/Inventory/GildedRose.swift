@@ -16,17 +16,21 @@ public class GildedRose {
     
     public func updateQuality() {
         
+        //MARK: TODO: Refactor this algo for clarity
         for i in 0..<items.count {
-            if (items[i].name != ItemName.brie.rawValue && items[i].name != ItemName.pass.rawValue) {
+            
+            // Item is normal: -1 quality per day
+            if (items[i].name != ItemName.brie.rawValue && items[i].name != ItemName.pass.rawValue) {   //Not Inversed Items
                 if (items[i].quality > 0) {
-                    if (items[i].name != ItemName.sulfuras.rawValue) {
+                    if (items[i].name != ItemName.sulfuras.rawValue) { // Not Legendary
                         items[i].quality = items[i].quality - 1
                     }
                 }
-            } else {
+            } else { //Item is Inversed
                 if (items[i].quality < 50) {
                     items[i].quality = items[i].quality + 1
                     
+                    //Pass
                     if (items[i].name == ItemName.pass.rawValue) {
                         if (items[i].sellIn < 11) {
                             if (items[i].quality < 50) {
@@ -42,23 +46,23 @@ public class GildedRose {
                     }
                 }
             }
-            
+            // Item is not Legendary
             if (items[i].name != ItemName.sulfuras.rawValue) {
                 items[i].sellIn = items[i].sellIn - 1
             }
-            
+            // SellIn is over
             if (items[i].sellIn < 0) {
                 if (items[i].name != ItemName.brie.rawValue) {
                     if (items[i].name != ItemName.pass.rawValue) {
                         if (items[i].quality > 0) {
                             if (items[i].name != ItemName.sulfuras.rawValue) {
-                                items[i].quality = items[i].quality - 1
+                                items[i].quality = items[i].quality - 1 //Normal -1
                             }
                         }
-                    } else {
+                    } else { //Pass value nil
                         items[i].quality = items[i].quality - items[i].quality
                     }
-                } else {
+                } else { // Brie
                     if (items[i].quality < 50) {
                         items[i].quality = items[i].quality + 1
                     }

@@ -20,20 +20,27 @@ class ViewController: UIViewController {
     func main() {
         
         let items = [
+            //Normal
             Item(name: ItemName.vest.rawValue, sellIn: 10, quality: 20),
-            Item(name: ItemName.brie.rawValue, sellIn: 2, quality: 0),
             Item(name: ItemName.elixir.rawValue, sellIn: 5, quality: 7),
-            Item(name: ItemName.sulfuras.rawValue, sellIn: 0, quality: 80),
-            Item(name: ItemName.sulfuras.rawValue, sellIn: -1, quality: 80),
+            
+            // Inversed
+            Item(name: ItemName.brie.rawValue, sellIn: 2, quality: 0),
             Item(name: ItemName.pass.rawValue, sellIn: 15, quality: 20),
             Item(name: ItemName.pass.rawValue, sellIn: 10, quality: 49),
             Item(name: ItemName.pass.rawValue, sellIn: 5, quality: 49),
+            
+            //Legendary
+            Item(name: ItemName.sulfuras.rawValue, sellIn: 0, quality: 80),
+            Item(name: ItemName.sulfuras.rawValue, sellIn: -1, quality: 80),
+            
+            //Conjured
             //Mark: FIXME: this conjured item does not work properly yet
             Item(name: ItemName.cake.rawValue, sellIn: 3, quality: 6)]
         
         let app = GildedRose(items: items)
         
-        var days = 2
+        var days = 10
         
         //MARK: TODO: Confirm if this is usefull
         if (CommandLine.argc > 1) {

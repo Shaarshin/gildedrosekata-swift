@@ -9,10 +9,18 @@
 import Foundation
 
 enum ItemName: String {
+    
+    //Normal Items
     case vest = "+5 Dexterity Vest"
-    case brie = "Aged Brie"
     case elixir = "Elixir of the Mongoose"
-    case sulfuras = "Sulfuras, Hand of Ragnaros"
+    
+    //Inversed Items
+    case brie = "Aged Brie"
     case pass = "Backstage passes to a TAFKAL80ETC concert"
+    
+    //Legendary Items
+    case sulfuras = "Sulfuras, Hand of Ragnaros"
+    
+    //Conjured Items
     case cake = "Conjured Mana Cake"
 }
