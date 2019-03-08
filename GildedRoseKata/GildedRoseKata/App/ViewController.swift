@@ -9,15 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        main()
-        
+        self.main()
     }
-
-    //TextTest
+    
+    //MARK: TextTest
     func main() {
         
         let items = [
@@ -35,8 +34,12 @@ class ViewController: UIViewController {
         let app = GildedRose(items: items);
         
         var days = 2;
+        
+        //MARK: TODO: Confirm if this is usefull
         if (CommandLine.argc > 1) {
-            days = Int(CommandLine.arguments[1])! + 1
+            if let newDays = Int(CommandLine.arguments[1]) {
+                days = newDays + 1
+            }
         }
         
         
@@ -51,6 +54,6 @@ class ViewController: UIViewController {
         }
         
     }
-
+    
 }
 

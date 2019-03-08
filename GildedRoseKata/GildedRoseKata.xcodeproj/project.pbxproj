@@ -15,7 +15,6 @@
 		132B56122232B1A100C6FD22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 132B56102232B1A100C6FD22 /* Main.storyboard */; };
 		132B56142232B1A200C6FD22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 132B56132232B1A200C6FD22 /* Assets.xcassets */; };
 		132B56172232B1A200C6FD22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 132B56152232B1A200C6FD22 /* LaunchScreen.storyboard */; };
-		132B562E2232B28000C6FD22 /* Tests in Resources */ = {isa = PBXBuildFile; fileRef = 132B56232232B27F00C6FD22 /* Tests */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 		132B56132232B1A200C6FD22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		132B56162232B1A200C6FD22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		132B56182232B1A200C6FD22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		132B56232232B27F00C6FD22 /* Tests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tests; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +63,6 @@
 		1319E9342232B4A8007BF664 /* GildedRoseKataTests */ = {
 			isa = PBXGroup;
 			children = (
-				132B56232232B27F00C6FD22 /* Tests */,
 				1319E9352232B4A8007BF664 /* GildedRoseKataTests.swift */,
 				1319E9372232B4A8007BF664 /* Info.plist */,
 			);
@@ -235,7 +232,6 @@
 			files = (
 				132B56172232B1A200C6FD22 /* LaunchScreen.storyboard in Resources */,
 				132B56142232B1A200C6FD22 /* Assets.xcassets in Resources */,
-				132B562E2232B28000C6FD22 /* Tests in Resources */,
 				132B56122232B1A100C6FD22 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
