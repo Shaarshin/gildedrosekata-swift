@@ -20,7 +20,7 @@ class ConjuredItemTests: XCTestCase {
         //given
         let items = [
             Item(name: ItemName.cake.rawValue, sellIn: 1, quality: 20)]
-        let app = GildedRose(items: items);
+        let app = GildedRose(items: items)
         //when
             app.updateQuality()
         //then
@@ -33,7 +33,7 @@ class ConjuredItemTests: XCTestCase {
         //given
         let items = [
             Item(name: ItemName.cake.rawValue, sellIn: 0, quality: 22)]
-        let app = GildedRose(items: items);
+        let app = GildedRose(items: items)
         //when
         app.updateQuality()
         //then
@@ -45,7 +45,7 @@ class ConjuredItemTests: XCTestCase {
         //given
         let items = [
             Item(name: ItemName.cake.rawValue, sellIn: -1, quality: 20)]
-        let app = GildedRose(items: items);
+        let app = GildedRose(items: items)
         //when
         app.updateQuality()
         //then
@@ -57,7 +57,7 @@ class ConjuredItemTests: XCTestCase {
         //given
         let items = [
             Item(name: ItemName.cake.rawValue, sellIn: 2, quality: 50)]
-        let app = GildedRose(items: items);
+        let app = GildedRose(items: items)
         //when
         app.updateQuality()
         //then
@@ -81,7 +81,7 @@ class ConjuredItemTests: XCTestCase {
         //given
         let items = [
             Item(name: ItemName.cake.rawValue, sellIn: 2, quality: 0)]
-        let app = GildedRose(items: items);
+        let app = GildedRose(items: items)
         //when
         app.updateQuality()
         //then

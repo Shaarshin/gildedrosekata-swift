@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
         
         let app = GildedRose(items: items)
         
-        var days = 11 // 10 Days to match the unit testing cases
+        var days = 11
         
         //MARK: TODO: Confirm if this is usefull
         if (CommandLine.argc > 1) {
@@ -49,8 +49,8 @@ class MainViewController: UIViewController {
         }
         
         for i in 0..<days {
-            print("-------- day \(i) --------");
-            print("name, sellIn, quality");
+            print("-------- day \(i) --------")
+            print("name, sellIn, quality")
             for item in items {
                 print(item)
             }
