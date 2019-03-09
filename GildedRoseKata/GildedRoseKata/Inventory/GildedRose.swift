@@ -22,7 +22,7 @@ public class GildedRose {
             // Item is normal: -1 quality per day
             if (items[i].name != ItemName.brie.rawValue && items[i].name != ItemName.pass.rawValue) {   //Not Inversed Items
                 if (items[i].quality > 0) {
-                    if (items[i].name == ItemName.cake.rawValue) { //Conjured: -2 quality per day
+                    if items[i].name == ItemName.cake.rawValue, items[i].quality > 1 { //Conjured: -2 quality per day
                         items[i].quality = items[i].quality - 2
                     } else if (items[i].name != ItemName.sulfuras.rawValue) { // Not Legendary
                         items[i].quality = items[i].quality - 1
@@ -57,7 +57,7 @@ public class GildedRose {
                 if (items[i].name != ItemName.brie.rawValue) {
                     if (items[i].name != ItemName.pass.rawValue) {
                         if (items[i].quality > 0) {
-                            if (items[i].name == ItemName.cake.rawValue) {
+                            if items[i].name == ItemName.cake.rawValue, items[i].quality > 1 {
                                  items[i].quality = items[i].quality - 2 //Conjured quality total -4 (Normal * 2)
                             } else if (items[i].name != ItemName.sulfuras.rawValue) {
                                 items[i].quality = items[i].quality - 1 //Normal total -2
