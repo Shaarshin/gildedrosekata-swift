@@ -11,10 +11,6 @@ import XCTest
 
 class NormalItemTests: XCTestCase {
     
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
     //MARK: Test example
     func testItemName() {
         //given

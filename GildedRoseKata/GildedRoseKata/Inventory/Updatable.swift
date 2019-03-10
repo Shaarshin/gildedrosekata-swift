@@ -35,8 +35,6 @@ extension Updatable {
         item.sellIn -= 1
     }
     
-    
-    
     // Inventory
     func update(item: Item) {
         updateQuality(item: item)
