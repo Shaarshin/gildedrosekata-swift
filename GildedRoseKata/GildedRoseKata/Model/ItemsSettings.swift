@@ -1,5 +1,5 @@
 //
-//  ItemsDB.swift
+//  ItemsSettings.swift
 //  GildedRoseKata
 //
 //  Created by Shaher Kassam on 08/03/2019.

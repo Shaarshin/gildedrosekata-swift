@@ -19,7 +19,7 @@ class BrieItemTests: XCTestCase {
     func testBrieItem() {
         //given
         let items = [Item(name: ItemName.brie.rawValue, sellIn: 2, quality: 10)]
-        let app = GildedRose(items: items)
+        let app = GildedRoseInventory(items: items)
         //when
         app.updateQuality()
         //then
@@ -30,7 +30,7 @@ class BrieItemTests: XCTestCase {
     func testBrieItemOnSellIn() {
         //given
         let items = [Item(name: ItemName.brie.rawValue, sellIn: 0, quality: 10)]
-        let app = GildedRose(items: items)
+        let app = GildedRoseInventory(items: items)
         //when
         app.updateQuality()
         //then
@@ -41,7 +41,7 @@ class BrieItemTests: XCTestCase {
     func testBrieItemAfterSellIn() {
         //given
         let items = [Item(name: ItemName.brie.rawValue, sellIn: -1, quality: 10)]
-        let app = GildedRose(items: items)
+        let app = GildedRoseInventory(items: items)
         //when
         app.updateQuality()
         //then
@@ -52,7 +52,7 @@ class BrieItemTests: XCTestCase {
     func testBrieItemMaxQuality() {
         //given
         let items = [Item(name: ItemName.brie.rawValue, sellIn: 2, quality: 50)]
-        let app = GildedRose(items: items)
+        let app = GildedRoseInventory(items: items)
         //when
         app.updateQuality()
         //then
@@ -63,7 +63,7 @@ class BrieItemTests: XCTestCase {
     func testBrieItemOnSellInMaxQuality() {
         //given
         let items = [Item(name: ItemName.brie.rawValue, sellIn: 0, quality: 50)]
-        let app = GildedRose(items: items)
+        let app = GildedRoseInventory(items: items)
         //when
         app.updateQuality()
         //then
@@ -74,7 +74,7 @@ class BrieItemTests: XCTestCase {
     func testBrieItemNearMaxQuality() {
         //given
         let items = [Item(name: ItemName.brie.rawValue, sellIn: -1, quality: 49)]
-        let app = GildedRose(items: items)
+        let app = GildedRoseInventory(items: items)
         //when
         app.updateQuality()
         //then

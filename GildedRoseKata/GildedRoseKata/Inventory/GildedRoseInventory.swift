@@ -7,7 +7,7 @@
 //
 
 
-public class GildedRose {
+public class GildedRoseInventory {
     var items:[Item]
     
     required public init(items:[Item]) {
@@ -15,7 +15,6 @@ public class GildedRose {
     }
     
     public func updateQuality() {
-        
         
         let _ = items.map {  item in
             categorize(item: item)

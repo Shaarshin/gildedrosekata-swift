@@ -20,7 +20,7 @@ class LegendaryItemTests: XCTestCase {
     func testLegendaryItem() {
         //given
         let items = [Item(name: ItemName.sulfuras.rawValue, sellIn: 1, quality: 80)]
-        let app = GildedRose(items: items)
+        let app = GildedRoseInventory(items: items)
         //when
         app.updateQuality()
         //then
@@ -31,7 +31,7 @@ class LegendaryItemTests: XCTestCase {
     func testLegendaryItemOnSellIn() {
         //given
         let items = [Item(name: ItemName.sulfuras.rawValue, sellIn: 0, quality: 80)]
-        let app = GildedRose(items: items)
+        let app = GildedRoseInventory(items: items)
         //when
         app.updateQuality()
         //then
@@ -43,7 +43,7 @@ class LegendaryItemTests: XCTestCase {
     func testLegendaryItemAfterSellIn() {
         //given
         let items = [Item(name: ItemName.sulfuras.rawValue, sellIn: -1, quality: 80)]
-        let app = GildedRose(items: items)
+        let app = GildedRoseInventory(items: items)
         //when
         app.updateQuality()
         //then

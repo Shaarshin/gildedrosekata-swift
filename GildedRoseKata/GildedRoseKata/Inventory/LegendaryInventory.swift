@@ -8,18 +8,17 @@
 
 import Foundation
 
-class LegendaryInventory: Inventory {
+class LegendaryInventory: Updatable {
     
-    override func updateBeforeSellIn(item: Item) {
+    func updateBeforeSellIn(item: Item) {
         //Just to make sure nothing happens
     }
     
-    //Changed
-    override func updateAfterSellIn(item: Item) {
+    func updateAfterSellIn(item: Item) {
         //Just to make sure nothing happens
     }
     
-    override func sellInDown(item: Item) {
+    func sellInDown(item: Item) {
          //Just to make sure nothing happens
     }
    

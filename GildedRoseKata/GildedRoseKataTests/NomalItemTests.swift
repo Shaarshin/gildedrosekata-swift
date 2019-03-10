@@ -19,7 +19,7 @@ class NormalItemTests: XCTestCase {
     func testItemName() {
         //given
         let items = [Item(name: ItemName.elixir.rawValue, sellIn: 0, quality: 0)]
-        let app = GildedRose(items: items)
+        let app = GildedRoseInventory(items: items)
         //when
         app.updateQuality()
         //then
@@ -32,7 +32,7 @@ class NormalItemTests: XCTestCase {
         let input = [Item(name: ItemName.elixir.rawValue, sellIn: 8, quality: 4)]
         
         //when
-        let app = GildedRose(items: input)
+        let app = GildedRoseInventory(items: input)
         app.updateQuality()
         
         //then
@@ -46,7 +46,7 @@ class NormalItemTests: XCTestCase {
                      Item(name: ItemName.elixir.rawValue, sellIn: 8, quality: 13)]
        
         //when
-        let app = GildedRose(items: items)
+        let app = GildedRoseInventory(items: items)
         app.updateQuality()
         
         //then
@@ -61,7 +61,7 @@ class NormalItemTests: XCTestCase {
         let items = [Item(name: ItemName.elixir.rawValue, sellIn: -1, quality: 10)]
         
         //when
-        let app = GildedRose(items: items)
+        let app = GildedRoseInventory(items: items)
         app.updateQuality()
         
         //then
@@ -74,7 +74,7 @@ class NormalItemTests: XCTestCase {
         let items = [Item(name: ItemName.elixir.rawValue, sellIn: 0, quality: 10)]
         
         //when
-        let app = GildedRose(items: items)
+        let app = GildedRoseInventory(items: items)
         app.updateQuality()
         
         //then
@@ -87,7 +87,7 @@ class NormalItemTests: XCTestCase {
         let items = [Item(name: ItemName.elixir.rawValue, sellIn: 2, quality: 0)]
         
         //when
-        let app = GildedRose(items: items)
+        let app = GildedRoseInventory(items: items)
         app.updateQuality()
         
         //then

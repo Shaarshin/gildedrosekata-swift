@@ -8,9 +8,9 @@
 
 import Foundation
 
-class ConjuredInventory: Inventory {
+class ConjuredInventory: Updatable {
     
-    override func updateBeforeSellIn(item: Item) {
+    func updateBeforeSellIn(item: Item) {
         guard item.quality > ItemQuality.min.rawValue else { return }
         
         if item.quality > ItemQuality.min.rawValue + 1 {
@@ -20,7 +20,7 @@ class ConjuredInventory: Inventory {
         }
     }
     
-     override func updateAfterSellIn(item: Item) {
+    func updateAfterSellIn(item: Item) {
         guard item.quality > ItemQuality.min.rawValue else { return }
         
         if item.quality > ItemQuality.min.rawValue + 3 {

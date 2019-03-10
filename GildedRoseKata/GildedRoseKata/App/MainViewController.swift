@@ -37,7 +37,7 @@ class MainViewController: UIViewController {
             //Conjured
             Item(name: ItemName.cake.rawValue, sellIn: 2, quality: 1)]
         
-        let app = GildedRose(items: items)
+        let app = GildedRoseInventory(items: items)
         
         var days = 11
         

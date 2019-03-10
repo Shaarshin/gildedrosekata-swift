@@ -8,14 +8,14 @@
 
 import Foundation
 
-class BrieInventory: Inventory {
+class BrieInventory: Updatable {
     
-    override func updateBeforeSellIn(item: Item) {
+     func updateBeforeSellIn(item: Item) {
         guard item.quality < ItemQuality.max.rawValue else { return }
         qualityUp(item: item, ratio: 1)
     }
     
-    override func updateAfterSellIn(item: Item) {
+     func updateAfterSellIn(item: Item) {
         guard item.quality < ItemQuality.max.rawValue else { return }
         
         if item.quality < ItemQuality.max.rawValue - 1 {

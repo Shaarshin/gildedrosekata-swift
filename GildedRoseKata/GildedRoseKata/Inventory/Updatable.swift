@@ -1,5 +1,5 @@
 //
-//  Inventory.swift
+//  Updatable.swift
 //  GildedRoseKata
 //
 //  Created by Shaher Kassam on 10/03/2019.
@@ -8,18 +8,13 @@
 
 import Foundation
 
-class Inventory {
-    
-    // To override
-    internal func updateBeforeSellIn(item: Item) {}
-    
-    // To override
-    internal func updateAfterSellIn(item: Item) {}
-    
-    // To override
-    internal func sellInDown(item: Item) {
-        item.sellIn -= 1
-    }
+protocol Updatable {
+    func updateBeforeSellIn(item: Item)
+    func updateAfterSellIn(item: Item)
+    func sellInDown(item: Item)
+}
+
+extension Updatable {
     
     //Helpers
     internal func qualityUp(item: Item, ratio: Int) {
@@ -32,6 +27,10 @@ class Inventory {
     
     internal func qualityNil(item: Item) {
         item.quality = ItemQuality.min.rawValue
+    }
+    
+    internal func sellInDown(item: Item) {
+        item.sellIn -= 1
     }
     
     // Inventory
@@ -51,4 +50,5 @@ class Inventory {
             updateAfterSellIn(item: item)
         }
     }
+    
 }

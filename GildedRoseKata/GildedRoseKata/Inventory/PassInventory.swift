@@ -8,9 +8,9 @@
 
 import Foundation
 
-class PassInventory: Inventory {
+class PassInventory: Updatable {
     
-    override func updateBeforeSellIn(item: Item) {
+    func updateBeforeSellIn(item: Item) {
         guard item.quality < ItemQuality.max.rawValue else { return }
         
         if item.sellIn <= ItemQuality.triple.rawValue {
@@ -22,9 +22,10 @@ class PassInventory: Inventory {
         }
     }
     
-    override func updateAfterSellIn(item: Item) {
+    func updateAfterSellIn(item: Item) {
         guard item.quality < ItemQuality.max.rawValue else { return }
         
         qualityNil(item: item)
     }
+    
 }

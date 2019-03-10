@@ -8,14 +8,14 @@
 
 import Foundation
 
-class NormalInventory: Inventory {
+class NormalInventory: Updatable {
     
-    override func updateBeforeSellIn(item: Item) {
+     func updateBeforeSellIn(item: Item) {
         guard item.quality > ItemQuality.min.rawValue else { return }
         qualityDown(item: item, ratio: 1)
     }
     
-    override func updateAfterSellIn(item: Item) {
+     func updateAfterSellIn(item: Item) {
         guard item.quality > ItemQuality.min.rawValue else { return }
         
         if item.quality > ItemQuality.min.rawValue + 1 {
