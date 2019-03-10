@@ -35,16 +35,7 @@ extension Updatable {
         item.sellIn -= 1
     }
     
-    internal func verifyQuality(item: Item) {
-        
-        if item.quality > 50 {
-            item.quality = 50
-        }
-        if item.quality < 0 {
-            item.quality = 0
-        }
-        
-    }
+    
     
     // Inventory
     func update(item: Item) {
@@ -61,6 +52,15 @@ extension Updatable {
             updateBeforeSellIn(item: item)
         } else {
             updateAfterSellIn(item: item)
+        }
+    }
+    
+    private func verifyQuality(item: Item) {
+        if item.quality > 50 {
+            item.quality = 50
+        }
+        if item.quality < 0 {
+            item.quality = 0
         }
     }
     
