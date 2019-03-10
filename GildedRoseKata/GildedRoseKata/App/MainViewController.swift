@@ -35,7 +35,7 @@ class MainViewController: UIViewController {
             Item(name: ItemName.sulfuras.rawValue, sellIn: -1, quality: 80),
             
             //Conjured
-            Item(name: ItemName.cake.rawValue, sellIn: 2, quality: 1)]
+            Item(name: ItemName.cake.rawValue, sellIn: 3, quality: 6)]
         
         let app = GildedRoseInventory(items: items)
         
