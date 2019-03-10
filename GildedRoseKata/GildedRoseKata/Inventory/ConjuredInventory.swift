@@ -11,22 +11,10 @@ import Foundation
 class ConjuredInventory: Updatable {
     
     func updateBeforeSellIn(item: Item) {
-        guard item.quality > ItemQuality.min.rawValue else { return }
-        
-        if item.quality > ItemQuality.min.rawValue + 1 {
-            qualityDown(item: item, ratio: 2)
-        } else {
-            qualityDown(item: item, ratio: 1)
-        }
+        qualityDown(item: item, ratio: 2)
     }
     
     func updateAfterSellIn(item: Item) {
-        guard item.quality > ItemQuality.min.rawValue else { return }
-        
-        if item.quality > ItemQuality.min.rawValue + 3 {
-            qualityDown(item: item, ratio: 4)
-        } else {
-            qualityDown(item: item, ratio: 2)
-        }
+        qualityDown(item: item, ratio: 4)
     }
 }

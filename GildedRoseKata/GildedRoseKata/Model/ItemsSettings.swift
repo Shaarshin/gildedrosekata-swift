@@ -25,7 +25,7 @@ enum ItemName: String {
     case cake = "Conjured Mana Cake"
 }
 
-enum ItemQuality: Int {
+enum QualitySettings: Int {
     case min = 0
     case max = 50
     case double = 10
