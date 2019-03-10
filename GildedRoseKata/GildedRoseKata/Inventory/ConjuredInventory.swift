@@ -29,5 +29,4 @@ class ConjuredInventory: Inventory {
             qualityDown(item: item, ratio: 2)
         }
     }
-    
 }

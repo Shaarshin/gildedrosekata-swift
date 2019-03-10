@@ -16,9 +16,9 @@ public class GildedRose {
     
     public func updateQuality() {
         
-        for i in 0..<items.count {
-            //Update based on category
-            categorize(item: items[i])
+        
+        let _ = items.map {  item in
+            categorize(item: item)
         }
     }
     
@@ -28,8 +28,10 @@ public class GildedRose {
         // Normal
         case ItemName.elixir.rawValue, ItemName.vest.rawValue :
             NormalInventory().update(item: item)
+        //Brie
         case ItemName.brie.rawValue :
             BrieInventory().update(item: item)
+        //Pass
         case ItemName.pass.rawValue :
             PassInventory().update(item: item)
         // Legendary

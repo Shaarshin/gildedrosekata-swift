@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
         self.main()
     }
     
-    //MARK: TextTest
+    //MARK: Text Test
     func main() {
         
         let items = [
@@ -41,7 +41,6 @@ class MainViewController: UIViewController {
         
         var days = 11
         
-        //MARK: TODO: Confirm if this is usefull
         if (CommandLine.argc > 1) {
             if let newDays = Int(CommandLine.arguments[1]) {
                 days = newDays + 1
