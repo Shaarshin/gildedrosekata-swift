@@ -95,13 +95,13 @@ class PassItemTests: XCTestCase {
     
     func testPassItemMax() {
         //given
-        let items = [Item(name: ItemName.pass.rawValue, sellIn: 1, quality: 50)]
+        let items = [Item(name: ItemName.pass.rawValue, sellIn: 0, quality: 50)]
         let app = GildedRoseInventory(items: items)
         //when
         app.updateQuality()
         //then
-        XCTAssertEqual(0, app.items[0].sellIn)
-        XCTAssertEqual(50, app.items[0].quality)
+        XCTAssertEqual(-1, app.items[0].sellIn)
+        XCTAssertEqual(0, app.items[0].quality)
     }
     
 }

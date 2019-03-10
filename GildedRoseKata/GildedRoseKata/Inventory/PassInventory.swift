@@ -25,7 +25,7 @@ class PassInventory: Updatable {
     }
     
     func updateAfterSellIn(item: Item) {
-        guard item.quality < ItemQuality.max.rawValue else { return }
+        guard item.quality <= ItemQuality.max.rawValue else { return }
         
         qualityNil(item: item)
     }
