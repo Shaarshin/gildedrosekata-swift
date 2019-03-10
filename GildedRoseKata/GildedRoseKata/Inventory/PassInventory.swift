@@ -1,5 +1,5 @@
 //
-//  BrieInventory.swift
+//  PassInventory.swift
 //  GildedRoseKata
 //
 //  Created by Shaher Kassam on 10/03/2019.
@@ -8,20 +8,23 @@
 
 import Foundation
 
-class BrieInventory: Inventory {
+class PassInventory: Inventory {
     
     override func updateBeforeSellIn(item: Item) {
         guard item.quality < ItemQuality.max.rawValue else { return }
-        qualityUp(item: item, ratio: 1)
+        
+        if item.sellIn <= ItemQuality.triple.rawValue {
+            qualityUp(item: item, ratio: 3)
+        } else if item.sellIn <= ItemQuality.double.rawValue {
+            qualityUp(item: item, ratio: 2)
+        } else {
+            qualityUp(item: item, ratio: 1)
+        }
     }
     
     override func updateAfterSellIn(item: Item) {
         guard item.quality < ItemQuality.max.rawValue else { return }
         
-        if item.quality < ItemQuality.max.rawValue - 1 {
-            qualityUp(item: item, ratio: 2)
-        } else  {
-            qualityUp(item: item, ratio: 1)
-        }
+        qualityNil(item: item)
     }
 }

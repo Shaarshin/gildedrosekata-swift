@@ -15,12 +15,12 @@
 		1319E95622340C33007BF664 /* PassItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1319E95522340C33007BF664 /* PassItemTests.swift */; };
 		1319E95822340CC1007BF664 /* LegendaryItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1319E95722340CC1007BF664 /* LegendaryItemTests.swift */; };
 		1319E95A22340CD3007BF664 /* ConjuredItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1319E95922340CD3007BF664 /* ConjuredItemTests.swift */; };
-		1319E95C22342633007BF664 /* itemCategorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1319E95B22342633007BF664 /* itemCategorize.swift */; };
 		1319E95E22342851007BF664 /* NormalInventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1319E95D22342851007BF664 /* NormalInventory.swift */; };
 		1319E98022352C23007BF664 /* BrieInventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1319E97F22352C23007BF664 /* BrieInventory.swift */; };
 		1319E98222352FB2007BF664 /* LegendaryInventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1319E98122352FB2007BF664 /* LegendaryInventory.swift */; };
 		1319E98422353BFD007BF664 /* PassInventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1319E98322353BFD007BF664 /* PassInventory.swift */; };
 		1319E98622353FD6007BF664 /* ConjuredInventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1319E98522353FD6007BF664 /* ConjuredInventory.swift */; };
+		1319E988223541C6007BF664 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1319E987223541C6007BF664 /* Inventory.swift */; };
 		132B560D2232B1A100C6FD22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132B560C2232B1A100C6FD22 /* AppDelegate.swift */; };
 		132B560F2232B1A100C6FD22 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132B560E2232B1A100C6FD22 /* MainViewController.swift */; };
 		132B56122232B1A100C6FD22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 132B56102232B1A100C6FD22 /* Main.storyboard */; };
@@ -49,12 +49,12 @@
 		1319E95522340C33007BF664 /* PassItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassItemTests.swift; sourceTree = "<group>"; };
 		1319E95722340CC1007BF664 /* LegendaryItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendaryItemTests.swift; sourceTree = "<group>"; };
 		1319E95922340CD3007BF664 /* ConjuredItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConjuredItemTests.swift; sourceTree = "<group>"; };
-		1319E95B22342633007BF664 /* itemCategorize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemCategorize.swift; sourceTree = "<group>"; };
 		1319E95D22342851007BF664 /* NormalInventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalInventory.swift; sourceTree = "<group>"; };
 		1319E97F22352C23007BF664 /* BrieInventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrieInventory.swift; sourceTree = "<group>"; };
 		1319E98122352FB2007BF664 /* LegendaryInventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendaryInventory.swift; sourceTree = "<group>"; };
 		1319E98322353BFD007BF664 /* PassInventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassInventory.swift; sourceTree = "<group>"; };
 		1319E98522353FD6007BF664 /* ConjuredInventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConjuredInventory.swift; sourceTree = "<group>"; };
+		1319E987223541C6007BF664 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		132B56092232B1A100C6FD22 /* GildedRoseKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GildedRoseKata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		132B560C2232B1A100C6FD22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		132B560E2232B1A100C6FD22 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -107,9 +107,11 @@
 		1319E9422232B669007BF664 /* Inventory */ = {
 			isa = PBXGroup;
 			children = (
+				1319E987223541C6007BF664 /* Inventory.swift */,
+				1319E98522353FD6007BF664 /* ConjuredInventory.swift */,
+				1319E98322353BFD007BF664 /* PassInventory.swift */,
 				1319E98122352FB2007BF664 /* LegendaryInventory.swift */,
 				1319E94A2232B762007BF664 /* GildedRose.swift */,
-				1319E95B22342633007BF664 /* itemCategorize.swift */,
 				1319E95D22342851007BF664 /* NormalInventory.swift */,
 				1319E97F22352C23007BF664 /* BrieInventory.swift */,
 			);
@@ -146,8 +148,6 @@
 		132B56002232B1A100C6FD22 = {
 			isa = PBXGroup;
 			children = (
-				1319E98522353FD6007BF664 /* ConjuredInventory.swift */,
-				1319E98322353BFD007BF664 /* PassInventory.swift */,
 				132B560B2232B1A100C6FD22 /* GildedRoseKata */,
 				1319E9342232B4A8007BF664 /* GildedRoseKataTests */,
 				132B560A2232B1A100C6FD22 /* Products */,
@@ -291,9 +291,9 @@
 				1319E94D2232B76C007BF664 /* Item.swift in Sources */,
 				1319E98422353BFD007BF664 /* PassInventory.swift in Sources */,
 				1319E98622353FD6007BF664 /* ConjuredInventory.swift in Sources */,
-				1319E95C22342633007BF664 /* itemCategorize.swift in Sources */,
 				132B560F2232B1A100C6FD22 /* MainViewController.swift in Sources */,
 				1319E98222352FB2007BF664 /* LegendaryInventory.swift in Sources */,
+				1319E988223541C6007BF664 /* Inventory.swift in Sources */,
 				1319E9522232C6D9007BF664 /* ItemsDB.swift in Sources */,
 				1319E95E22342851007BF664 /* NormalInventory.swift in Sources */,
 				1319E94B2232B762007BF664 /* GildedRose.swift in Sources */,

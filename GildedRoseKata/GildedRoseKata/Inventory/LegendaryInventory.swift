@@ -8,34 +8,20 @@
 
 import Foundation
 
-class LegendaryInventory {
+class LegendaryInventory: Inventory {
     
-    //Same
-    func update(item: Item) {
-        updateQuality(item: item)
-        updateSellInn(item: item)
+    override func updateBeforeSellIn(item: Item) {
+        //Just to make sure nothing happens
     }
     
     //Changed
-    private func updateSellInn(item: Item) {
+    override func updateAfterSellIn(item: Item) {
+        //Just to make sure nothing happens
     }
     
-    //Same
-    private func updateQuality(item: Item) {
-        if item.sellIn > 0 {
-            updateBeforeSellIn(item: item)
-        } else {
-            updateAfterSellIn(item: item)
-        }
+    override func sellInDown(item: Item) {
+         //Just to make sure nothing happens
     }
-    
-    //Changed
-    private func updateBeforeSellIn(item: Item) {
-    }
-    
-     //Changed
-    private func updateAfterSellIn(item: Item) {
-    }
-    
+   
 }
 

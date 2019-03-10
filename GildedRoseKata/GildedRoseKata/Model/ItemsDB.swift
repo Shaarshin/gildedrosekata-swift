@@ -11,7 +11,7 @@ import Foundation
 enum ItemName: String {
     
     //Normal Items
-    case vest = "+5 Dexterity Vest"
+    case vest
     case elixir = "Elixir of the Mongoose"
     
     //Inversed Items
@@ -26,8 +26,8 @@ enum ItemName: String {
 }
 
 enum ItemQuality: Int {
+    case min = 0
     case max = 50
-    case double = 11
-    case triple = 6
+    case double = 10
+    case triple = 5
 }
-
