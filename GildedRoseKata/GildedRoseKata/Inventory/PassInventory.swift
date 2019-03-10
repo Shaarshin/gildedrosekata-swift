@@ -13,9 +13,11 @@ class PassInventory: Updatable {
     func updateBeforeSellIn(item: Item) {
         guard item.quality < ItemQuality.max.rawValue else { return }
         
-        if item.sellIn <= ItemQuality.triple.rawValue {
+        if item.quality < ItemQuality.max.rawValue - 3,
+        item.sellIn <= ItemQuality.triple.rawValue {
             qualityUp(item: item, ratio: 3)
-        } else if item.sellIn <= ItemQuality.double.rawValue {
+        } else if item.quality < ItemQuality.max.rawValue - 2,
+            item.sellIn <= ItemQuality.double.rawValue {
             qualityUp(item: item, ratio: 2)
         } else {
             qualityUp(item: item, ratio: 1)

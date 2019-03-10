@@ -49,9 +49,31 @@ class PassItemTests: XCTestCase {
         XCTAssertEqual(23, app.items[0].quality)
     }
     
+    func testPassItemDoubleEdge() {
+        //given
+        let items = [ Item(name: ItemName.pass.rawValue, sellIn: 10, quality: 49)]
+        let app = GildedRoseInventory(items: items)
+        //when
+        app.updateQuality()
+        //then
+        XCTAssertEqual(9, app.items[0].sellIn)
+        XCTAssertEqual(50, app.items[0].quality)
+    }
+    
+    func testPassItemTripleEdge() {
+        //given
+        let items = [Item(name: ItemName.pass.rawValue, sellIn: 5, quality: 49)]
+        let app = GildedRoseInventory(items: items)
+        //when
+        app.updateQuality()
+        //then
+        XCTAssertEqual(4, app.items[0].sellIn)
+        XCTAssertEqual(50, app.items[0].quality)
+    }
+    
     func testPassItemAfterSellIn() {
         //given
-        let items = [Item(name: ItemName.pass.rawValue, sellIn: -1, quality: 0)]
+        let items = [Item(name: ItemName.pass.rawValue, sellIn: -1, quality: 49)]
         let app = GildedRoseInventory(items: items)
         //when
         app.updateQuality()
