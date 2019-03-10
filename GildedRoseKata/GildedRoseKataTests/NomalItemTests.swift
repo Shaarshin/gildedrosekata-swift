@@ -18,12 +18,12 @@ class NormalItemTests: XCTestCase {
     //MARK: Test example
     func testItemName() {
         //given
-        let items = [Item(name: "foo", sellIn: 0, quality: 0)]
+        let items = [Item(name: ItemName.elixir.rawValue, sellIn: 0, quality: 0)]
         let app = GildedRose(items: items)
         //when
         app.updateQuality()
         //then
-        XCTAssertEqual("foo", app.items[0].name)
+        XCTAssertEqual(ItemName.elixir.rawValue, app.items[0].name)
     }
     
     //MARK: Normal

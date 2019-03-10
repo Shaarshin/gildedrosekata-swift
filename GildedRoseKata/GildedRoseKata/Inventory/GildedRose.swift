@@ -19,6 +19,11 @@ public class GildedRose {
         //MARK: TODO: Refactor this algo for clarity
         for i in 0..<items.count {
             
+            //Update based on category
+            categorize(item: items[i])
+            
+            
+            /* Refacto
             // Item is normal: -1 quality per day
             if (items[i].name != ItemName.brie.rawValue && items[i].name != ItemName.pass.rawValue) {   //Not Inversed Items
                 if (items[i].quality > 0) {
@@ -71,7 +76,10 @@ public class GildedRose {
                         items[i].quality = items[i].quality + 1
                     }
                 }
-            }
+            }*/
         }
     }
+    
+   
+
 }
