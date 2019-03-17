@@ -108,10 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				1319E987223541C6007BF664 /* Updatable.swift */,
+				1319E94A2232B762007BF664 /* GildedRoseInventory.swift */,
 				1319E98522353FD6007BF664 /* ConjuredInventory.swift */,
 				1319E98322353BFD007BF664 /* PassInventory.swift */,
 				1319E98122352FB2007BF664 /* LegendaryInventory.swift */,
-				1319E94A2232B762007BF664 /* GildedRoseInventory.swift */,
 				1319E95D22342851007BF664 /* NormalInventory.swift */,
 				1319E97F22352C23007BF664 /* BrieInventory.swift */,
 			);

@@ -24,7 +24,7 @@ extension Updatable {
     
     internal func qualityDown(item: Item, ratio: Int) {
         item.quality -= 1 * ratio
-         verifyQuality(item: item)
+        verifyQuality(item: item)
     }
     
     internal func qualityNil(item: Item) {
@@ -39,6 +39,13 @@ extension Updatable {
     func update(item: Item) {
         updateQuality(item: item)
         updateSellInn(item: item)
+    }
+    
+     func update(items: [Item]) {
+       _ = items.map{
+            updateQuality(item: $0)
+            updateSellInn(item: $0)
+        }
     }
     
     private func updateSellInn(item: Item) {
