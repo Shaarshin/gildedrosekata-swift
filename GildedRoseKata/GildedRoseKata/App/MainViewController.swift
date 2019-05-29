@@ -19,8 +19,7 @@ class MainViewController: UIViewController {
         
         //tableview
         mainTableView.tableFooterView = UIView()
-    
-        
+        mainTableView.rowHeight = UITableView.automaticDimension
         
         self.main()
     }
@@ -29,8 +28,7 @@ class MainViewController: UIViewController {
     func main() {
         
         items = [
-            //Normal
-            Item(name: ItemName.vest.rawValue, sellIn: 10, quality: 20),
+            //Normal@@            Item(name: ItemName.vest.rawValue, sellIn: 10, quality: 20),
             Item(name: ItemName.elixir.rawValue, sellIn: 5, quality: 7),
             
             // Inversed
@@ -90,7 +88,19 @@ extension MainViewController: UITableViewDataSource {
     {
         return "Kata"
     }
-    
-    
-    
+}
+
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let currentItem = items[indexPath.row]
+ 
+        // TODO: Navigation to move to a Controller
+        let dv = UIStoryboard(name: "SecondViewController", bundle: nil).instantiateViewController(withIdentifier: "Second") as! DetailViewController
+        
+        dv.item = currentItem
+        
+        self.navigationController?.pushViewController(dv, animated: true)
+        
+    }
 }
