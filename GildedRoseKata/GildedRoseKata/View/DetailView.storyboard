@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ItemName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76C-yv-43a">
-                                <rect key="frame" x="148" y="323" width="79" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ItemName" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76C-yv-43a">
+                                <rect key="frame" x="10" y="323.5" width="355" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -28,6 +28,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="76C-yv-43a" firstAttribute="centerX" secondItem="pLv-Yq-ec2" secondAttribute="centerX" id="GL7-Tw-cUn"/>
+                            <constraint firstItem="76C-yv-43a" firstAttribute="leading" secondItem="Bgd-Fl-ovf" secondAttribute="leading" constant="10" id="gWn-hN-fpj"/>
+                            <constraint firstItem="Bgd-Fl-ovf" firstAttribute="trailing" secondItem="76C-yv-43a" secondAttribute="trailing" constant="10" id="jyd-TW-yGu"/>
                             <constraint firstItem="76C-yv-43a" firstAttribute="centerY" secondItem="pLv-Yq-ec2" secondAttribute="centerY" id="rpF-Tq-w84"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bgd-Fl-ovf"/>

@@ -15,20 +15,11 @@ public class GildedRoseInventory {
     }
     
     public func updateQuality() {
-        
-//        let _ = items.map {  item in
-//            categorize(item: item)
-//        }
-        
         _ = items.map{ categorize(item: $0) }
-        
-        
-//        NormalInventory().update(items: items.filter({ $0.name == ItemName.elixir.rawValue || $0.name == ItemName.vest.rawValue}))
-        
-         }
+    }
     
     func categorize(item: Item) {
-
+        
         switch item.name {
         // Normal
         case ItemName.elixir.rawValue, ItemName.vest.rawValue :

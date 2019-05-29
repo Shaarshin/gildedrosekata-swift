@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBOutlet var mainTableView: UITableView!
+    var detailView: DetailViewController?
     
     private var items: [Item] = []
     
@@ -21,6 +22,9 @@ class MainViewController: UIViewController {
         mainTableView.tableFooterView = UIView()
         mainTableView.rowHeight = UITableView.automaticDimension
         
+        // TODO: Navigation to move to a Controller
+        detailView = (UIStoryboard(name: "DetailView", bundle: nil).instantiateViewController(withIdentifier: "detailView") as! DetailViewController)
+        
         self.main()
     }
     
@@ -28,7 +32,8 @@ class MainViewController: UIViewController {
     func main() {
         
         items = [
-            //Normal@@            Item(name: ItemName.vest.rawValue, sellIn: 10, quality: 20),
+            //Normal
+            Item(name: ItemName.vest.rawValue, sellIn: 10, quality: 20),
             Item(name: ItemName.elixir.rawValue, sellIn: 5, quality: 7),
             
             // Inversed
@@ -53,8 +58,6 @@ class MainViewController: UIViewController {
                 days = newDays + 1
             }
         }
-        
-        //items.map({return print($0)})
         
         for i in 0..<days {
             print("-------- day \(i) --------")
@@ -84,8 +87,7 @@ extension MainViewController: UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section:Int) -> String?
-    {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section:Int) -> String? {
         return "Kata"
     }
 }
@@ -95,12 +97,9 @@ extension MainViewController: UITableViewDelegate {
         
         let currentItem = items[indexPath.row]
  
-        // TODO: Navigation to move to a Controller
-        let dv = UIStoryboard(name: "SecondViewController", bundle: nil).instantiateViewController(withIdentifier: "Second") as! DetailViewController
-        
-        dv.item = currentItem
-        
-        self.navigationController?.pushViewController(dv, animated: true)
-        
+        if let dv = detailView {
+            dv.item = currentItem
+            self.navigationController?.pushViewController(dv, animated: true)
+        }
     }
 }

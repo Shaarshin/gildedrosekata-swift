@@ -18,7 +18,6 @@ class DetailViewController: UIViewController {
     convenience init?(item: Item) {
         self.init()
         self.item = item
-       
     }
 
     override func viewWillAppear(_ animated: Bool) {
