@@ -18,6 +18,15 @@ public class GildedRoseInventory {
         _ = items.map{ categorize(item: $0) }
     }
     
+    public func printItem(_ day: Int) {
+        print("-------- day \(day) --------")
+        print("name, sellIn, quality")
+        for item in items {
+            print(item)
+        }
+        print("")
+    }
+    
     func categorize(item: Item) {
         
         switch item.name {

@@ -59,13 +59,8 @@ class MainViewController: UIViewController {
             }
         }
         
-        for i in 0..<days {
-            print("-------- day \(i) --------")
-            print("name, sellIn, quality")
-            for item in items {
-                print(item)
-            }
-            print("")
+        for day in 0..<days {
+            app.printItem(day)
             app.updateQuality()
         }
     }
@@ -82,7 +77,7 @@ extension MainViewController: UITableViewDataSource {
         let currentItem = items[indexPath.row]
         
         cell.textLabel?.text = currentItem.name
-        cell.detailTextLabel?.text = "(\(currentItem.quality),\(currentItem.sellIn))"
+        cell.detailTextLabel?.text = "(\(currentItem.sellIn),\(currentItem.quality))"
         
         return cell
     }
